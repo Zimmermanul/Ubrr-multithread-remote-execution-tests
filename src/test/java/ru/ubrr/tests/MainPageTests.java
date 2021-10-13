@@ -23,15 +23,26 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainPageTests {
+public class MainPageTests extends TestBase {
     SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy");
     Date date = new Date();
+
     @Test
+    @Description("Currency displayed date should be actual")
+    @DisplayName("Currency Date Test")
     void currencyDateTest(){
-        open("https://www.ubrr.ru/");
-        System.out.println($(".currency__caption").toString());
-        this.formatDate.setTimeZone(TimeZone.getTimeZone("Russia/Moscow"));
-        $(".currency__caption").shouldHave(text("Обновлено " + formatDate.format(date)));
+
+        step("Open url 'https://www.ubrr.ru/'", () -> {
+            open("https://www.ubrr.ru/");
+        });
+
+        step("Get actual date", () -> {
+            this.formatDate.setTimeZone(TimeZone.getTimeZone("Russia/Moscow"));
+        });
+
+        step("Assert that date on page is actual", () -> {
+            $(".currency__caption").shouldHave(text("Обновлено " + formatDate.format(date)));
+        });
     }
 
 
