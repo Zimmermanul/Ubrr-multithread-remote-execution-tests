@@ -11,6 +11,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -67,6 +68,66 @@ public class MainPageTests extends TestBase {
             String errorText = "SEVERE";
 
             assertThat(consoleLogs).doesNotContain(errorText);
+        });
+    }
+
+    @Test
+    @Description("Navigation through tabs works and description matches")
+    @DisplayName("Tabs navigation test")
+    void TabsTest() {
+
+        step("Open url 'https://www.ubrr.ru/'", () -> {
+            open("https://www.ubrr.ru/");
+        });
+
+        step("Choose city", () -> {
+            $(".city-head__link").click();
+            $(byText("Тюмень")).scrollIntoView(atBottom()).click();
+        });
+
+        step("Navigate to credit cards", () -> {
+            $(byText("Кредитные карты")).click();
+            $(byText("Подобрать карту")).click();
+        });
+
+        step("Check text", () -> {
+            $("body").shouldHave(Condition.text("Узнайте, какая кредитная карта подходит именно вам!"));
+        });
+
+        step("Navigate to credits", () -> {
+            $(byText("Кредиты")).click();
+            $(byText("Подобрать кредит")).click();
+        });
+
+        step("Check text", () -> {
+            $("body").shouldHave(Condition.text("Кредит на любые цели"));
+        });
+
+        step("Navigate to deposits", () -> {
+            $(byText("Вклады")).click();
+            $(byText("Все вклады")).click();
+        });
+
+        step("Check text", () -> {
+            $("body").shouldHave(Condition.text("Подобрать вклад"));
+        });
+
+        step("Navigate to deposit cards", () -> {
+            $(byText("Дебетовые карты")).click();
+            $(byText("Подобрать карту")).click();
+        });
+
+        step("Check text", () -> {
+            $("body").shouldHave(Condition.text("Выберите свою"));
+        });
+
+        step("Navigate to hypothec", () -> {
+            $(byText("Ипотека")).parent().click();
+            $(byText("Подобрать программу ипотеки")).click();
+        });
+
+        step("Check text", () -> {
+            $("body").shouldHave(Condition.text("Ипотечные программы"));
         });
     }
 }
