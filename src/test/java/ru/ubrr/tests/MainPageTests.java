@@ -1,36 +1,38 @@
 package ru.ubrr.tests;
 
-import org.assertj.core.api.AssertionsForClassTypes;
-import ru.ubrr.helpers.DriverUtils;
+import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.ubrr.helpers.DriverUtils;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.TimeZone;
-import com.codeborne.selenide.*;
-import org.openqa.selenium.Keys;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
-import static com.codeborne.selenide.CollectionCondition.*;
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.*;
-import static com.codeborne.selenide.Selenide.*;
 
 public class MainPageTests extends TestBase {
     SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy");
     Date date = new Date();
 
     @Test
+    @Description("Сheck that the website opens")
+    @DisplayName("Successful open test")
+    void openMainPageTest() {
+        step("Open https://www.ubrr.ru/", () -> {
+            open("https://www.ubrr.ru/");
+            $("body").shouldHave(Condition.text("Уральский банк реконструкции и развития"));
+        });
+    }
+
+    @Test
     @Description("Currency displayed date should be actual")
-    @DisplayName("Currency Date Test")
-    void currencyDateTest(){
+    @DisplayName("Currency date test")
+    void currencyDateTest() {
 
         step("Open url 'https://www.ubrr.ru/'", () -> {
             open("https://www.ubrr.ru/");
