@@ -20,12 +20,19 @@ public class MainPageTests extends TestBase {
     Date date = new Date();
 
     @Test
-    @Description("Сheck that the website opens")
+    @Description("Сheck body and page title")
     @DisplayName("Successful open test")
     void openMainPageTest() {
         step("Open https://www.ubrr.ru/", () -> {
             open("https://www.ubrr.ru/");
             $("body").shouldHave(Condition.text("Уральский банк реконструкции и развития"));
+        });
+
+        step("Page title should have text 'Банк «УБРиР»'", () -> {
+            String expectedTitle = "Банк «УБРиР»";
+            String actualTitle = title();
+
+            assertThat(actualTitle).contains(expectedTitle);
         });
     }
 
@@ -59,6 +66,7 @@ public class MainPageTests extends TestBase {
         step("Check text 'Станьте клиентом банка'", () -> {
             step("// todo: just add selenium action");
         });
+
     }
 
     @Test
@@ -66,13 +74,13 @@ public class MainPageTests extends TestBase {
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("Open url 'https://www.ubrr.ru/'", () ->
-            open("https://www.ubrr.ru/"));
+                open("https://www.ubrr.ru/"));
 
-        step("Page title should have text 'Банк «УБРиР» (ПАО) — кредитные карты, потребительские кредиты, дебетовые карты, вклады, ипотека, рко, эквайринг'", () -> {
-            String expectedTitle = "Банк «УБРиР» (ПАО) — кредитные карты, потребительские кредиты, дебетовые карты, вклады, ипотека, рко, эквайринг";
+        step("Page title should have text 'Банк «УБРиР»'", () -> {
+            String expectedTitle = "Банк «УБРиР»";
             String actualTitle = title();
 
-            assertThat(actualTitle).isEqualTo(expectedTitle);
+            assertThat(actualTitle).contains(expectedTitle);
         });
     }
 
