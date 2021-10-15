@@ -12,6 +12,7 @@ import java.util.TimeZone;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -86,8 +87,8 @@ public class MainPageTests extends TestBase {
         });
 
         step("Navigate to credit cards", () -> {
-            $(byText("Кредитные карты")).click();
-            $(byText("Подобрать карту")).click();
+            $(byXpath("//span[contains(.,'Кредитные карты')]")).click();
+            $(byXpath("//span[contains(.,'Подобрать карту')]")).click();
         });
 
         step("Check text", () -> {
@@ -95,8 +96,8 @@ public class MainPageTests extends TestBase {
         });
 
         step("Navigate to credits", () -> {
-            $(byText("Кредиты")).click();
-            $(byText("Подобрать кредит")).click();
+            $(byXpath("//span[contains(.,'Кредиты')]")).click();
+            $(byXpath("//span[contains(.,'Подобрать кредит')]")).click();
         });
 
         step("Check text", () -> {
@@ -104,8 +105,8 @@ public class MainPageTests extends TestBase {
         });
 
         step("Navigate to deposits", () -> {
-            $(byText("Вклады")).click();
-            $(byText("Все вклады")).click();
+            $(byXpath("//span[contains(.,'Вклады')]")).click();
+            $(byXpath("//span[contains(.,'Все вклады')]")).click();
         });
 
         step("Check text", () -> {
@@ -113,8 +114,8 @@ public class MainPageTests extends TestBase {
         });
 
         step("Navigate to deposit cards", () -> {
-            $(byText("Дебетовые карты")).click();
-            $(byText("Подобрать карту")).click();
+            $(byXpath("//span[contains(.,'Дебетовые карты')]")).click();
+            $(byXpath("//a[contains(text(),'Дебетовые карты')]")).click();
         });
 
         step("Check text", () -> {
@@ -122,8 +123,8 @@ public class MainPageTests extends TestBase {
         });
 
         step("Navigate to hypothec", () -> {
-            $(byText("Ипотека")).parent().click();
-            $(byText("Подобрать программу ипотеки")).click();
+            $(byXpath("//div[2]/div/ul/li[5]/a/span")).click();
+            $(byXpath("//a[contains(.,'Подобрать программу ипотеки')]")).click();
         });
 
         step("Check text", () -> {
