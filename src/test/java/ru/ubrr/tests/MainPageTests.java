@@ -73,6 +73,25 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @Description("Checks that the city selection applies")
+    @DisplayName("City localisation test")
+    void LocalisationTest() {
+
+        step("Open url 'https://www.ubrr.ru/'", () -> {
+            open("https://www.ubrr.ru/");
+        });
+
+        step("Choose city", () -> {
+            $(".city-head__link").click();
+            $(byText("Тюмень")).scrollIntoView(atBottom()).click();
+        });
+
+        step("Check text", () -> {
+            $("body").shouldHave(Condition.text("Тюмень"));
+        });
+    }
+
+    @Test
     @Description("Navigation through tabs works and description matches")
     @DisplayName("Tabs navigation test")
     void TabsTest() {
@@ -80,7 +99,6 @@ public class MainPageTests extends TestBase {
         step("Open url 'https://www.ubrr.ru/'", () -> {
             open("https://www.ubrr.ru/");
         });
-
         step("Choose city", () -> {
             $(".city-head__link").click();
             $(byText("Тюмень")).scrollIntoView(atBottom()).click();
