@@ -106,7 +106,7 @@ public class MainPageTests extends TestBase {
 
         step("Navigate to credit cards", () -> {
             $(byXpath("//span[contains(.,'Кредитные карты')]")).click();
-            $(byXpath("//span[contains(.,'Подобрать карту')]")).click();
+            $(byText("Все кредитные карты")).click();
         });
 
         step("Check text", () -> {
