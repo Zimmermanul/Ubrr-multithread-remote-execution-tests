@@ -55,8 +55,7 @@ tasks.withType(Test) {
                 'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
         ]
     }
-
-    testLogging {
+      testLogging {
         lifecycle {
 //            events "started", "failed"
             events "started", "skipped", "failed", "standard_error", "standard_out"
