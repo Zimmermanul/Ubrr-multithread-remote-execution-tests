@@ -88,6 +88,7 @@ public class MainPageTests extends TestBase {
 
         step("Check text", () -> {
             $("body").shouldHave(Condition.text("Тюмень"));
+            sleep(8000);
         });
     }
 
