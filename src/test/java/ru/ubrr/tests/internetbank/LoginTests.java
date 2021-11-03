@@ -1,13 +1,15 @@
 package ru.ubrr.tests.internetbank;
 
-import ru.ubrr.config.internetbank.App;
-import ru.ubrr.helpers.AllureRestAssuredFilter;
-import ru.ubrr.tests.TestBase;
 import com.codeborne.selenide.Configuration;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.Cookie;
+import ru.ubrr.config.internetbank.App;
+import ru.ubrr.helpers.AllureRestAssuredFilter;
+import ru.ubrr.tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
@@ -16,6 +18,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 
+@Feature("Authorization Tests")
 @Story("Login tests")
 public class LoginTests extends TestBase {
 
@@ -26,6 +29,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5788")
     @Tag("internet bank tests")
     @Disabled("Example test code for further test development")
     @DisplayName("Successful authorization to internet bank (UI)")
@@ -44,6 +48,7 @@ public class LoginTests extends TestBase {
     }
 
     @Test
+    @AllureId("5789")
     @Tag("internet bank tests")
     @Disabled("Example test code for further test development")
     @DisplayName("Successful authorization to internet bank (API + UI)")

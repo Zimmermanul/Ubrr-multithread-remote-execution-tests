@@ -1,7 +1,9 @@
 package ru.ubrr.tests;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.ubrr.helpers.DriverUtils;
@@ -17,11 +19,14 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
+@Feature("MainPage Tests")
+
 public class MainPageTests extends TestBase {
     SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy");
     Date date = new Date();
 
     @Test
+    @AllureId("5759")
     @Description("Сheck body and page title")
     @DisplayName("Successful open test")
     void openMainPageTest() {
@@ -43,6 +48,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @AllureId("5761")
     @Description("Currency displayed date should be actual")
     @DisplayName("Currency date test")
     void currencyDateTest() {
@@ -66,6 +72,7 @@ public class MainPageTests extends TestBase {
 
 
     @Test
+    @AllureId("5762")
     @Description("Page console log should not have errors")
     @DisplayName("Console log test")
     void consoleShouldNotHaveErrorsTest() {
@@ -84,6 +91,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @AllureId("5764")
     @Description("Checks that the city selection applies")
     @DisplayName("City localisation test")
     void LocalisationTest() {
@@ -107,6 +115,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
+    @AllureId("5766")
     @Description("Navigation through tabs works and description matches")
     @DisplayName("Tabs navigation test")
     void TabsTest() {
