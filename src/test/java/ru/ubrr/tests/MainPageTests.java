@@ -38,7 +38,7 @@ public class MainPageTests extends TestBase {
         });
 
         step("Wait for attachments generated", () -> {
-            sleep(2000);
+            sleep(5000);
         });
     }
 
@@ -60,7 +60,7 @@ public class MainPageTests extends TestBase {
         });
 
         step("Wait for attachments generated", () -> {
-            sleep(2000);
+            sleep(5000);
         });
     }
 
@@ -79,7 +79,7 @@ public class MainPageTests extends TestBase {
             assertThat(consoleLogs).doesNotContain(errorText);
         });
         step("Wait for attachments generated", () -> {
-            sleep(2000);
+            sleep(5000);
         });
     }
 
@@ -102,7 +102,7 @@ public class MainPageTests extends TestBase {
         });
 
         step("Wait for attachments generated", () -> {
-            sleep(2000);
+            sleep(5000);
         });
     }
 
