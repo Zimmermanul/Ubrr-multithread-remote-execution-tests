@@ -41,10 +41,6 @@ public class MainPageTests extends TestBase {
 
             assertThat(actualTitle).contains(expectedTitle);
         });
-
-        step("Wait for attachments generated", () -> {
-            sleep(5000);
-        });
     }
 
     @Test
@@ -64,10 +60,6 @@ public class MainPageTests extends TestBase {
         step("Assert that date on page is actual", () -> {
             $(".currency__caption").shouldHave(text("Обновлено " + formatDate.format(date)));
         });
-
-        step("Wait for attachments generated", () -> {
-            sleep(5000);
-        });
     }
 
 
@@ -84,9 +76,6 @@ public class MainPageTests extends TestBase {
             String errorText = "SEVERE";
 
             assertThat(consoleLogs).doesNotContain(errorText);
-        });
-        step("Wait for attachments generated", () -> {
-            sleep(5000);
         });
     }
 
@@ -107,10 +96,6 @@ public class MainPageTests extends TestBase {
 
         step("Check text", () -> {
             $("body").shouldHave(Condition.text("Тюмень"));
-        });
-
-        step("Wait for attachments generated", () -> {
-            sleep(5000);
         });
     }
 
