@@ -2,7 +2,7 @@
 ![01](./img/01.png)
 
 ## Используемый стек:
-![java](https://github.com/Mhabibullin/Mhabibullin/blob/main/imgForReadme/java.svg)
+![java](https://github.com/Mhabibullin/Mhabibullin/blob/main/imgForReadme/java.svg?raw=true "Java")
 ![gradle](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Gradle.png?raw=true "Gradle")
 ![jUnit5](https://github.com/antsuishch/data_repository/blob/master/resources/icons/JUnit5.png?raw=true "JUnit5")
 ![selenide](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Selenide.png?raw=true "Selenide")
