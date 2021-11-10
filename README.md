@@ -2,16 +2,7 @@
 ![01](./img/01.png)
 
 ## Используемый стек:
-![java]("https://github.com/Mhabibullin/Mhabibullin/blob/main/imgForReadme/java.svg" alt="azure" width="40" height="40")
-![gradle](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Gradle.png?raw=true "Gradle")
-![jUnit5](https://github.com/antsuishch/data_repository/blob/master/resources/icons/JUnit5.png?raw=true "JUnit5")
-![selenide](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Selenide.png?raw=true "Selenide")
-![jenkins](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Jenkins.png?raw=true "Jenkins")
-![Selenoid](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Selenoid.png?raw=true "Selenoid")
-![allure-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Allure_Report.png?raw=true "Allure_Report")
-![allure-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Allure_Report.png?raw=true "Allure_Report")
-![telegram-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Telegram.png?raw=true "Telegram")
-![telegram-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Telegram.png?raw=true "Telegram")
+<img src="imgForReadme/java.svg" alt="azure" width="40" height="40"/>
 
 Java, Gradle, JUnit5, Selenide, Jenkins, Selenoid, Allure Reports, Telegram (уведомления)
 
