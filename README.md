@@ -6,6 +6,18 @@
 |:----:|:------:|:------:|:--------:|:-------:|:--------:|:--------------:|:--------------:|:--------:|:----:|
 | <img src="img/imgForReadme/java.svg" width="40" height="40"> | <img src="img/imgForReadme/Gradle.svg" width="40" height="40"> | <img src="img/imgForReadme/JUnit5.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenide.svg" width="40" height="40"> | <img src="img/imgForReadme/Jenkins.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenoid.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_Report.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_EE.svg" width="40" height="40"> | <img src="img/imgForReadme/telegram.svg" width="40" height="40"> | <img src="img/imgForReadme/Jira.svg" width="40" height="40"> |
 
+## Запуск тестов
+
+1ё
+https://jenkins.autotests.cloud/job/UBRR%20Tests/
+
+Пример общего отчета о прохождении тестов:
+
+![allure-reports](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/mainallure.png?raw=true)
+
+Пример подробного отчета:
+
+![allure](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/suite.png?raw=true)
 
 
 ## Для построения отчета используется Allure Reports
