@@ -1,5 +1,7 @@
 # Автотесты для сайта https://www.ubrr.ru/
-![tele2.spb](https://github.com/antsuishch/data_repository/blob/master/resources/screentest/tele2pagemain.PNG?raw=true)
+![01](./img/01.png)
+![01](./img/01.png?raw=true)
+
 ## Используемый стек:
 ![java](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Java.png?raw=true "Java")
 ![gradle](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Gradle.png?raw=true "Gradle")
