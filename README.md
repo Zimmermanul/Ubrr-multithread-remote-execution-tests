@@ -2,28 +2,15 @@
 ![01](./img/01.png)
 
 ## Используемый стек:
-<p align="left"> 
- <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/java.svg" alt="azure" width="40" height="40"/>
-  <a href="https://gradle.org/" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Gradle.svg" alt="azure" width="40" height="40"/> </a> 
-  <a href="https://junit.org/" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/JUnit5.svg" alt="azure" width="40" height="40"/> </a> 
-  <a href="https://selenide.org/" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Selenide.svg" alt="azure" width="40" height="40"/> </a>
-  <a href="https://www.jenkins.io" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Jenkins.svg" alt="azure" width="40" height="40"/> </a> 
-  <a href="http://allure.qatools.ru/" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Allure_Report.svg" alt="azure" width="40" height="40"/> </a> 
-  <a href="https://qameta.io/" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Allure_EE.svg" alt="azure" width="40" height="40"/> </a> 
-  <a href="https://aerokube.com/selenoid/" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Selenoid.svg" alt="azure" width="40" height="40"/> </a> 
-  <a href="https://t.me/avadhutabrahman" target="_blank"><img src="https://www.vectorlogo.zone/logos/telegram/telegram-icon.svg" alt="Maksim Khabibullin" height="30" width="30" /></a>
-    <a href="https://www.atlassian.com/ru/software/jira" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Jira.svg" alt="azure" width="40" height="40"/> </a> </p>
-
-  <a href="https://www.atlassian.com/ru/software/jira" target="_blank"> <img src="https://github.com/Mhabibullin/Mhabibullin/tree/main/imgForReadme/Jira.svg" alt="azure" width="40" height="40"/> </a> </p>
-
-
-![java](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Java.png?raw=true "Java")
+![java](https://github.com/Mhabibullin/Mhabibullin/blob/main/imgForReadme/java.svg)
 ![gradle](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Gradle.png?raw=true "Gradle")
 ![jUnit5](https://github.com/antsuishch/data_repository/blob/master/resources/icons/JUnit5.png?raw=true "JUnit5")
 ![selenide](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Selenide.png?raw=true "Selenide")
 ![jenkins](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Jenkins.png?raw=true "Jenkins")
 ![Selenoid](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Selenoid.png?raw=true "Selenoid")
 ![allure-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Allure_Report.png?raw=true "Allure_Report")
+![allure-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Allure_Report.png?raw=true "Allure_Report")
+![telegram-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Telegram.png?raw=true "Telegram")
 ![telegram-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Telegram.png?raw=true "Telegram")
 
 Java, Gradle, JUnit5, Selenide, Jenkins, Selenoid, Allure Reports, Telegram (уведомления)
