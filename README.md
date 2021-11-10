@@ -1,6 +1,5 @@
 # Автотесты для сайта https://www.ubrr.ru/
 ![01](./img/01.png)
-![01](./img/01.png?raw=true)
 
 ## Используемый стек:
 ![java](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Java.png?raw=true "Java")
