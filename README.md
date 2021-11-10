@@ -2,7 +2,7 @@
 ![01](./img/01.png)
 
 ## Используемый стек:
-![Java](https://github.com/Mhabibullin/Mhabibullin/raw/main/imgForReadme/java.svg alt="azure" width="40" height="40"/>)
+![Java](https://github.com/Mhabibullin/Mhabibullin/raw/main/imgForReadme/java.svg alt="azure" width="40" height="40")
 
 Java, Gradle, JUnit5, Selenide, Jenkins, Selenoid, Allure Reports, Telegram (уведомления)
 
