@@ -6,18 +6,23 @@
 |:----:|:------:|:------:|:--------:|:-------:|:--------:|:--------------:|:--------------:|:--------:|:----:|
 | <img src="img/imgForReadme/java.svg" width="40" height="40"> | <img src="img/imgForReadme/Gradle.svg" width="40" height="40"> | <img src="img/imgForReadme/JUnit5.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenide.svg" width="40" height="40"> | <img src="img/imgForReadme/Jenkins.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenoid.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_Report.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_EE.svg" width="40" height="40"> | <img src="img/imgForReadme/telegram.svg" width="40" height="40"> | <img src="img/imgForReadme/Jira.svg" width="40" height="40"> |
 
-## Запуск тестов
+## Запуск тестов через Jenkins
 
-1ё
-https://jenkins.autotests.cloud/job/UBRR%20Tests/
+1. Открыть ссылку на [проект](https://jenkins.autotests.cloud/job/UBRR%20Tests/build?delay=0sec)
+2. Выбрать пункт "Собрать с параметрами"
+3. Указать параметры или оставить параметры по умолчанию, нажать "Собрать"
+   ![06.png](img/06.png)
 
-Пример общего отчета о прохождении тестов:
+### Возможности параметризации, которые были добавлены в сборку:
 
-![allure-reports](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/mainallure.png?raw=true)
-
-Пример подробного отчета:
-
-![allure](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/suite.png?raw=true)
+* браузер
+* версия браузера
+* размер окна браузера
+* мобильная версия сайта (Android, IOS)
+* адрес удаленного сервера
+* адрес удаленного видео хранилища
+* количество потоков запуска
+___
 
 
 ## Для построения отчета используется Allure Reports
