@@ -17,6 +17,7 @@ gradle clean test
 ### Сформировать отчет в Allure:
 ```bash
 allure serve build/allure-results
+```
 
 ### Запуск тестов через Jenkins
 
