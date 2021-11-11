@@ -6,7 +6,7 @@
 |:----:|:------:|:------:|:--------:|:-------:|:--------:|:--------------:|:--------------:|:--------:|:----:|
 | <img src="img/imgForReadme/java.svg" width="40" height="40"> | <img src="img/imgForReadme/Gradle.svg" width="40" height="40"> | <img src="img/imgForReadme/JUnit5.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenide.svg" width="40" height="40"> | <img src="img/imgForReadme/Jenkins.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenoid.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_Report.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_EE.svg" width="40" height="40"> | <img src="img/imgForReadme/telegram.svg" width="40" height="40"> | <img src="img/imgForReadme/Jira.svg" width="40" height="40"> |
 
-## Запуск тестов :rocket:
+## Запуск тестов
 
 ### Как запустить тесты из командной строки
 Запустить тесты с дефолтными параметрами:
@@ -78,4 +78,4 @@ Dashboards:
 
 ## Контакты
 
-:airplane: [**Telegram - @Avadhutabrahman**](https://t.me/avadhutabrahman)
+:rocket: [**Telegram - @Avadhutabrahman**](https://t.me/avadhutabrahman)
