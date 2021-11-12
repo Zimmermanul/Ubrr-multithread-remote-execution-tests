@@ -24,14 +24,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MainPageTests extends TestBase {
     SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy");
     Date date = new Date();
+    static String baseurl = "https://www.ubrr.ru/";
 
     @Test
     @AllureId("5759")
     @Description("Сheck body and page title")
     @DisplayName("Successful open test")
     void openMainPageTest() {
-        step("Open https://www.ubrr.ru/", () -> {
-            open("https://www.ubrr.ru/");
+        step("Open mainpage", () -> {
+            open(baseurl);
             $("body").shouldHave(Condition.text("Уральский банк реконструкции и развития"));
         });
 
@@ -49,8 +50,8 @@ public class MainPageTests extends TestBase {
     @DisplayName("Currency date test")
     void currencyDateTest() {
 
-        step("Open url 'https://www.ubrr.ru/'", () -> {
-            open("https://www.ubrr.ru/");
+        step("Open mainpage", () -> {
+            open(baseurl);
         });
 
         step("Get actual date", () -> {
@@ -68,8 +69,8 @@ public class MainPageTests extends TestBase {
     @Description("Page console log should not have errors")
     @DisplayName("Console log test")
     void consoleShouldNotHaveErrorsTest() {
-        step("Open url 'https://www.ubrr.ru/'", () ->
-                open("https://www.ubrr.ru/"));
+        step("Open mainpage", () ->
+                open(baseurl));
 
         step("Console logs should not contain text 'SEVERE'", () -> {
             String consoleLogs = DriverUtils.getConsoleLogs();
@@ -85,8 +86,8 @@ public class MainPageTests extends TestBase {
     @DisplayName("City localisation test")
     void LocalisationTest() {
 
-        step("Open url 'https://www.ubrr.ru/'", () -> {
-            open("https://www.ubrr.ru/");
+        step("Open mainpage", () -> {
+            open(baseurl);
         });
 
         step("Choose city", () -> {
@@ -105,8 +106,8 @@ public class MainPageTests extends TestBase {
     @DisplayName("Tabs navigation test")
     void TabsTest() {
 
-        step("Open url 'https://www.ubrr.ru/'", () -> {
-            open("https://www.ubrr.ru/");
+        step("Open mainpage", () -> {
+            open(baseurl);
         });
         step("Choose city", () -> {
             $(".city-head__link").click();
