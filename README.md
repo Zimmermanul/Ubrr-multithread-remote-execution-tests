@@ -1,64 +1,81 @@
-# Автотесты для сайта https://www.ubrr.ru/
-![tele2.spb](https://github.com/antsuishch/data_repository/blob/master/resources/screentest/tele2pagemain.PNG?raw=true)
-## Используемый стек:
-![java](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Java.png?raw=true "Java")
-![gradle](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Gradle.png?raw=true "Gradle")
-![jUnit5](https://github.com/antsuishch/data_repository/blob/master/resources/icons/JUnit5.png?raw=true "JUnit5")
-![selenide](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Selenide.png?raw=true "Selenide")
-![jenkins](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Jenkins.png?raw=true "Jenkins")
-![Selenoid](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Selenoid.png?raw=true "Selenoid")
-![allure-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Allure_Report.png?raw=true "Allure_Report")
-![telegram-logo](https://github.com/antsuishch/data_repository/blob/master/resources/icons/Telegram.png?raw=true "Telegram")
+# Автотесты для сайта  [**ubrr.ru**](https://www.ubrr.ru/)
+![01](./img/01.png)
 
-Java, Gradle, JUnit5, Selenide, Jenkins, Selenoid, Allure Reports, Telegram (уведомления)
+## Используемый стек:
+| Java | Gradle | Junit5 | Selenide | Jenkins | Selenoid | Allure Reports | Allure TestOps | Telegram | Jira |
+|:----:|:------:|:------:|:--------:|:-------:|:--------:|:--------------:|:--------------:|:--------:|:----:|
+| <img src="img/imgForReadme/java.svg" width="40" height="40"> | <img src="img/imgForReadme/Gradle.svg" width="40" height="40"> | <img src="img/imgForReadme/JUnit5.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenide.svg" width="40" height="40"> | <img src="img/imgForReadme/Jenkins.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenoid.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_Report.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_EE.svg" width="40" height="40"> | <img src="img/imgForReadme/telegram.svg" width="40" height="40"> | <img src="img/imgForReadme/Jira.svg" width="40" height="40"> |
+
+## Запуск тестов
+
+### Как запустить тесты из командной строки
+Запустить тесты с дефолтными параметрами:
+```bash
+gradle clean test
+```
+
+### Сформировать отчет в Allure:
+```bash
+allure serve build/allure-results
+```
+
+### Запуск тестов через Jenkins
+
+1. Открыть ссылку на [проект](https://jenkins.autotests.cloud/job/UBRR%20Tests/build?delay=0sec)
+2. Выбрать пункт "Собрать с параметрами"
+3. Указать параметры или оставить параметры по умолчанию, нажать "Собрать"
+
+   ![06.png](img/06.png)
+
+### Возможности параметризации, которые были добавлены в сборку:
+
+* браузер
+* версия браузера
+* размер окна браузера
+* мобильная версия сайта (Android, IOS)
+* адрес удаленного сервера
+* адрес удаленного видео хранилища
+* количество потоков запуска
+
+## Тесты запускаются в Selenoid
+
+![alt "Video from Selenoid"](./img/test.gif "Video from Selenoid")
+
+##  Запуск тестов происходит в 5 потоков
+
+![threads](./img/05.png)
 
 ## Для построения отчета используется Allure Reports
 
 Пример общего отчета о прохождении тестов:
 
-![allure-reports](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/mainallure.png?raw=true)
+![allure-reports](./img/09.png)
 
-Пример подробного отчета:
+Пример подробного отчета (с приложенными скриншотами, логами, видео):
 
-![allure](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/suite.png?raw=true)
+![allure](./img/08.png)
 
-## Также присутствует интеграция с системой тест-менеджмента Allure TestOps
-Dashboards:
 
-![alluretestops](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/dashboardbase.png?raw=true)
+## Уведомления о результатах отправляются чат-ботом в Telegram:
+![bot](./img/07.png)
+
+
+## Тесты интегрированы в систему тест-менеджмента Allure TestOps
 
 Пример ручных и автоматизированных тестов в Allure TestOps:
 
-![ops](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/testopscases.png?raw=true)
+![ops](./img/02.png)
 
-Пример запуска теста в Selenoid:
+Dashboards:
 
-![video](https://github.com/antsuishch/data_repository/blob/master/resources/gif/a098cf6c21c1beef.gif?raw=true)
+![alluretestops](./img/04.png)
 
-##  Запуск тестов происходит в 2 потока
 
-Количество потоков задается при запуске тестов
-![threads](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/threads.png?raw=true)
+## Тесты интегрированы в систему таск-трекинга Jira
 
-## Уведомление о результате прогона отправляется чат-ботом в Telegram:
-![bot](https://github.com/antsuishch/data_repository/blob/master/resources/newscreen/telegram.jpg?raw=true)
+![ops](./img/11.png)
 
-## Пример запуска
-Для удаленного запуска необходимо заполнить файл remote.properties или передать параметры в командной строке:
 
-* browser (default chrome)
-* browserVersion (default 91.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
+## Контакты
 
-Запуск с использованием файла remote.properties:
-```bash
-gradle clean test
-```
-
-Запуск с ручным указанием параметров:
-```bash
-gradle clean test -Dbrowser=chrome -DbrowserVersion=91.0 -DbrowserSize=1920x1080 -DbrowserMobileView= -DremoteDriverUrl=selenoid.autotests.cloud -DremoteDriverUser=user1 -DremoteDriverPassword=1234 -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=2
-```
+:rocket: [**Telegram - @Avadhutabrahman**](https://t.me/avadhutabrahman)
