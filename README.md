@@ -1,68 +1,68 @@
-# Автотесты для сайта  [**ubrr.ru**](https://www.ubrr.ru/)
+# Autotests for [**ubrr.ru**](https://www.ubrr.ru/)
 ![01](./img/01.png)
 
-## Используемый стек:
+## Stack:
 | Java | Gradle | Junit5 | Selenide | Jenkins | Selenoid | Allure Reports | Allure TestOps | Telegram | Jira |
 |:----:|:------:|:------:|:--------:|:-------:|:--------:|:--------------:|:--------------:|:--------:|:----:|
 | <img src="img/imgForReadme/java.svg" width="40" height="40"> | <img src="img/imgForReadme/Gradle.svg" width="40" height="40"> | <img src="img/imgForReadme/JUnit5.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenide.svg" width="40" height="40"> | <img src="img/imgForReadme/Jenkins.svg" width="40" height="40"> | <img src="img/imgForReadme/Selenoid.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_Report.svg" width="40" height="40"> | <img src="img/imgForReadme/Allure_EE.svg" width="40" height="40"> | <img src="img/imgForReadme/telegram.svg" width="40" height="40"> | <img src="img/imgForReadme/Jira.svg" width="40" height="40"> |
 
-## Запуск тестов
+## Tests launch
 
-### Как запустить тесты из командной строки
-Запустить тесты с дефолтными параметрами:
+### How to run tests from the command line
+Run tests with default parameters:
 ```bash
 gradle clean test
 ```
 
-### Сформировать отчет в Allure:
+### Generate Allure report:
 ```bash
 allure serve build/allure-results
 ```
 
-### Запуск тестов через Jenkins
+### Running tests from Jenkins:
 
-1. Открыть ссылку на [проект](https://jenkins.autotests.cloud/job/UBRR%20Tests/build?delay=0sec)
-2. Выбрать пункт "Собрать с параметрами"
-3. Указать параметры или оставить параметры по умолчанию, нажать "Собрать"
+1. Open link to [project](https://jenkins.autotests.cloud/job/UBRR%20Tests/build?delay=0sec)
+2. Select "Collect with parameters"
+3. Specify parameters or leave the default parameters, click "Collect"
 
    ![06.png](img/06.png)
 
-### Возможности параметризации, которые были добавлены в сборку:
+### Parameterization features added to the build:
 
-* браузер
-* версия браузера
-* размер окна браузера
-* мобильная версия сайта (Android, IOS)
-* адрес удаленного сервера
-* адрес удаленного видео хранилища
-* количество потоков запуска
+* browser type
+* browser version
+* browser window size
+* mobile version of the site (Android, IOS)
+* remote server address
+* remote video storage address
+* number of startup threads
 
-## Тесты запускаются в Selenoid
+## Tests run in Selenoid
 
 ![alt "Video from Selenoid"](./img/test.gif "Video from Selenoid")
 
-##  Запуск тестов происходит в 5 потоков
+##  Tests run in 5 threads
 
 ![threads](./img/05.png)
 
-## Для построения отчета используется Allure Reports
+## Allure Report is used to build the report
 
-Пример общего отчета о прохождении тестов:
+An example of a general test report:
 
 ![allure-reports](./img/09.png)
 
-Пример подробного отчета (с приложенными скриншотами, логами, видео):
+An example of a detailed report (with attached screenshots, logs, videos):
 
 ![allure](./img/08.png)
 
 
-## Уведомления о результатах отправляются чат-ботом в Telegram:
+## Results notifications are sent by the chatbot to Telegram:
 ![bot](./img/07.png)
 
 
-## Тесты интегрированы в систему тест-менеджмента Allure TestOps
+## Tests are integrated into the Allure TestOps test management system
 
-Пример ручных и автоматизированных тестов в Allure TestOps:
+An example of manual and automated tests in Allure TestOps:
 
 ![ops](./img/02.png)
 
@@ -71,11 +71,11 @@ Dashboards:
 ![alluretestops](./img/04.png)
 
 
-## Тесты интегрированы в систему таск-трекинга Jira
+## Tests are integrated into the Jira task tracking system
 
 ![ops](./img/11.png)
 
 
-## Контакты
+## Contact me
 
 :rocket: [**Telegram - @Avadhutabrahman**](https://t.me/avadhutabrahman)
