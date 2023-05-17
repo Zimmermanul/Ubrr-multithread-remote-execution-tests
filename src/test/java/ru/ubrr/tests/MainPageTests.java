@@ -10,6 +10,8 @@ import ru.ubrr.base.TestBase;
 import ru.ubrr.helpers.SharedSteps;
 import ru.ubrr.pages.MainPage;
 
+import java.util.Map;
+
 import static ru.ubrr.testData.StaticData.ZIMMERMANUL;
 
 
@@ -19,6 +21,19 @@ import static ru.ubrr.testData.StaticData.ZIMMERMANUL;
 
 public class MainPageTests extends TestBase {
 
+    @Test
+    @AllureId("5761")
+    @DisplayName("Currency test")
+    @QAAutomation(ZIMMERMANUL)
+    void currencyDateTest() {
+        MainPage mainPage = new MainPage();
+        SharedSteps sharedSteps = new SharedSteps();
+        mainPage.openMainPage();
+        mainPage.checkCurrencyDate(sharedSteps.getCurrentDate("Russia/Moscow"));
+        String currencyPriceFromPage = mainPage.getCurrencyExchange();
+        Map<String, Double> buyMap = mainPage.getBuyMap(currencyPriceFromPage);
+        mainPage.calculatePriceByCurrencyValue(buyMap.get("USD"), 100);
+    }
 
     @Test
     @AllureId("5759")
@@ -26,32 +41,10 @@ public class MainPageTests extends TestBase {
     @QAAutomation(ZIMMERMANUL)
     void openMainPageTest() {
         MainPage mainPage = new MainPage();
+        SharedSteps sharedSteps = new SharedSteps();
         mainPage.openMainPage();
         mainPage.checkPageTitle();
-    }
-
-    @Test
-    @AllureId("5761")
-    @DisplayName("Currency date test")
-    @QAAutomation(ZIMMERMANUL)
-    void currencyDateTest() {
-        MainPage mainPage = new MainPage();
-        SharedSteps sharedSteps = new SharedSteps();
-        mainPage.openMainPage();
-        mainPage.checkCurrencyDateOnPage(sharedSteps.getCurrentDate("Russia/Moscow"));
-    }
-
-
-    @Test
-    @AllureId("5762")
-    @DisplayName("Console log test")
-    @QAAutomation(ZIMMERMANUL)
-    void consoleShouldNotHaveErrorsTest() {
-        MainPage mainPage = new MainPage();
-        SharedSteps sharedSteps = new SharedSteps();
-        mainPage.openMainPage();
         sharedSteps.checkConsoleLogs();
-
     }
 
     @Test

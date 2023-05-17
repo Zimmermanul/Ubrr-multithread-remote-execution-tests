@@ -5,6 +5,7 @@ import ru.ubrr.utils.DriverUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.TimeZone;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -15,7 +16,7 @@ public class SharedSteps {
     @Step("Get current date by Timezone")
     public String getCurrentDate(String timezone) {
         Date date = new Date();
-        SimpleDateFormat formatDate = new SimpleDateFormat("dd.MM.yyyy");
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd MMMM yyyy", Locale.getDefault());
         formatDate.setTimeZone(TimeZone.getTimeZone(timezone));
         return formatDate.format(date);
     }
