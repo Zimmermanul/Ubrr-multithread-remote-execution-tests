@@ -22,6 +22,18 @@ import static ru.ubrr.testData.StaticData.ZIMMERMANUL;
 public class MainPageTests extends TestBase {
 
     @Test
+    @AllureId("5759")
+    @DisplayName("Successful open test")
+    @QAAutomation(ZIMMERMANUL)
+    void openMainPageTest() {
+        MainPage mainPage = new MainPage();
+        SharedSteps sharedSteps = new SharedSteps();
+        mainPage.openMainPage();
+        mainPage.checkPageTitle();
+        sharedSteps.checkConsoleLogs();
+    }
+
+    @Test
     @AllureId("5761")
     @DisplayName("Currency test")
     @QAAutomation(ZIMMERMANUL)
@@ -33,18 +45,6 @@ public class MainPageTests extends TestBase {
         String currencyPriceFromPage = mainPage.getCurrencyExchange();
         Map<String, Double> buyMap = mainPage.getBuyMap(currencyPriceFromPage);
         mainPage.calculatePriceByCurrencyValue(buyMap.get("USD"), 100);
-    }
-
-    @Test
-    @AllureId("5759")
-    @DisplayName("Successful open test")
-    @QAAutomation(ZIMMERMANUL)
-    void openMainPageTest() {
-        MainPage mainPage = new MainPage();
-        SharedSteps sharedSteps = new SharedSteps();
-        mainPage.openMainPage();
-        mainPage.checkPageTitle();
-        sharedSteps.checkConsoleLogs();
     }
 
     @Test
