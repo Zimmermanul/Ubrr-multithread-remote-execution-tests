@@ -63,9 +63,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task internetbank(type: Test) {
-    useJUnitPlatform {
-        includeTags 'internetbank'
-    }
-}

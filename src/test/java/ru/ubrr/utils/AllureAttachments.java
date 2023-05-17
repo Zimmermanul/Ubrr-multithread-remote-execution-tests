@@ -1,4 +1,4 @@
-package ru.ubrr.helpers;
+package ru.ubrr.utils;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;

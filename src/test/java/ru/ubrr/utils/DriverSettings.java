@@ -1,4 +1,4 @@
-package ru.ubrr.helpers;
+package ru.ubrr.utils;
 
 import ru.ubrr.config.Project;
 import com.codeborne.selenide.Configuration;

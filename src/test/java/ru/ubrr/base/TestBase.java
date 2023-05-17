@@ -1,9 +1,10 @@
-package ru.ubrr.tests;
+package ru.ubrr.base;
 
 import ru.ubrr.config.Project;
-import ru.ubrr.helpers.AllureAttachments;
-import ru.ubrr.helpers.DriverSettings;
-import ru.ubrr.helpers.DriverUtils;
+import ru.ubrr.helpers.SharedSteps;
+import ru.ubrr.utils.AllureAttachments;
+import ru.ubrr.utils.DriverSettings;
+import ru.ubrr.utils.DriverUtils;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.junit5.AllureJunit5;
